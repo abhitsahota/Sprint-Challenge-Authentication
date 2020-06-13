@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "test": "jest --watch --verbose"
+    "test": "cross-env NODE_ENV=testing jest --watch --verbose"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "axios": "^0.19.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
@@ -30,7 +31,11 @@
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
+    "jest": "^26.0.1",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
