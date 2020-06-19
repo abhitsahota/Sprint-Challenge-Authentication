@@ -6,7 +6,7 @@ module.exports = {
 }
 
 async function register(user) {
-    const [id] = await  db('users').insert(user, 'id');
+    const [id] = await  db('users').insert(user, 'id').returning('id');
     return db('users').where({id}).first()
 }
 

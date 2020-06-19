@@ -1,10 +1,4 @@
 const knex = require('knex');
-const dotenv = require('dotenv')
-
-const result = dotenv.config()
-if (result.error) {
-  throw result.error
-}
 
 const knexConfig = require('../knexfile.js');
 

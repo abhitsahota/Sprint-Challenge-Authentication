@@ -29,7 +29,7 @@ describe('server.js', () => {
   });
 
   describe('login route', () => {
-
+    console.log('hi')
     it('should return an OK status code from the login route', async () => {
       await request(server)
       .post('/api/auth/register')
